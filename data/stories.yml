@@ -1,0 +1,90 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+# commented to check utter_goodbye
+  # - intent: deny
+  # - action: utter_goodbye
+
+#no need to have a specific sdtory for it as it already has the te same thing refined in rules.nlu
+
+# - story: name path using chatbot\ask_name path 
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: chitchat/ask_name
+#   - action: utter_chitchat 
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: path about time
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: give_time
+#   - action: action_show_time
+
+# -story: newsletter signup with OR 
+#   steps:
+#   - intent: signuup_newsletter
+#   - action: utter_ask_confirm_signup
+#   - or: 
+#     - intent: affirm
+#     - intent: thanks
+#   - action: action_signup_newsletter 
+
+
+#_____________________
+
+# - story: beginning of conversation
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_goodbye
+#   - checkpoint: ask_feedback  
+
+# - story: user provides feedback 
+#    steps:
+#    - checkpoint: ask_feedback
+#    - action: utter_ask_feedback
+#    - intent: inform
+#    - action: utter_anything_else
+
+# - story: user doesn't have feedback 
+#   steps:
+#   - checkpoint: ask_feedback
+#   - action: utter_ask_feedback
+#   - intent: deny
+#   - action: utter_no_problem
+#   - action: utter_anything_else
+
+# - story: happy path
+#   steps:
+#   - user: Ciao!
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy

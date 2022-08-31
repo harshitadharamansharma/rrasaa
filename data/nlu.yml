@@ -1,0 +1,197 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning 
+    - goodevening
+    - good afternoon
+    - theek ba
+    - ok
+    
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fine
+    - oohk
+    - ok
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: chitchat/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+    - Naam kya hai tumhara?
+
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - I like sunny days in Berlin.
+
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time 
+    - what time is it
+    - samay kya hai
+    - kitne baj rhe hain
+    - time kya ho rha hai
+    - kya time hai
+    - time kya hai be
+    - can you tell me the time
+
+# using pre-built models:
+# - intent: inform
+#   examples: |
+#   - My account number is [236133123] (account_number)
+
+# Using Regex:
+# - regex: account_number
+#   examples: |
+#   -  \d{10,12}
+# - intent: inform
+#  examples: |
+#  - My account number is [236133123] (account_number)
+
+# Using machine learning:
+# - intent: check_balance
+#   examples: |
+#   - I would like to check my [savings account] (account_type)
+#   - Can you show me the balance of my [current account] (account_type)
+
+
+# - synonyms: credit
+#   examples: |
+#   - credit card account
+#   - credit account
+
+
+# - intent: check_balance
+# #   examples: |
+# #   - I would like to check my [credit card account] {"entity":"account","value":"credit"}
+# #   - How do I check the  [current account] {"entity":"account","value":"credit"}
+
+
+# # Lookup tables are lists of words used to generate case-sensitive regular expression patterns
+# - lookup: country
+#   examples: |
+#      - Afganistan
+#      - Albania
+#      - Bangladesh
+#      - Denmark
+#      - India
+#      - Jakarta
+#      - New Zealand
+#      - Sri Lanka
+#      - Thailand
+#      - Zambia
+#      - Zimbabwe
+
+
+# # Entity Roles and Groups - allow you to put extracted entities under a specific group.
+# - intent: book_a_flight
+#   examples: |
+#      - Iam looking for a flight from [New York]{"entity":"location","role":"origin
+#      "} to [India]{"entity":"location","role":"destination"}.
+
+#     #  {"entity":"location","group:"1"}.
+
+
+# - intent: inquire_time
+#   examples: |
+#      - what time is it?
+#      - what time is it in [Delhi] (place) ?
+#      - what time is it in [India] (places)?
+#      - tell me the time in [India] (place)?
+#      - what is the current time in [Delhi](place)
+#      - what time is it in [Gurugram](place)
+     
+
+# - lookup: place
+#   examples: |
+#   - India
+#   - Delhi
+#   - Gurugram
+#   - Lucknow
+#   - Amritsar
+#   - New Delhi
+

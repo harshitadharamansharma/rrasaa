@@ -1,0 +1,36 @@
+version: "3.1"
+
+rules:
+
+#commented to check utter_goodbye
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say I am a bot anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: action_iamabot
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat 
+
+- rule: Greeting Rule
+  steps: 
+  - intent: greet
+  - action: utter_greet
+
+- rule: Tell the time
+  steps:
+  - intent: inquire_time
+  - action: action_tell_time
+  
+  # action_remember_where
